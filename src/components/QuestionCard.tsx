@@ -4,7 +4,7 @@ type Props = {
     question: string;
     answers: string[];
     callback: any;
-    userAnswer: any;
+    playerAnswer: any;
     questionNum: number;
     totalQuestions: number;
 }
@@ -13,7 +13,7 @@ const QuestionCard: React.FunctionComponent<Props> = ({
           question,
           answers,
           callback,
-          userAnswer,
+          playerAnswer,
           questionNum,
           totalQuestions
       }) => (
