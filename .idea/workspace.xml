@@ -30,12 +30,9 @@
       <change afterPath="$PROJECT_DIR$/../readable-code" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sql-advanced-queries/mysqlsampledatabase.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../the-dream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/quiz-background.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,9 +44,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="2" />
   </component>
   <component name="ProjectId" id="1yAcuLGZ6MorJXeoJ5unicvnu6s" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -66,7 +60,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="ts.external.directory.path" value="C:\xampp\htdocs\BECODE\the-mountain\the-impossible-quiz\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\xampp\htdocs\BECODE\the-mountain\the-impossible-quiz-2\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -83,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1631698059046</updated>
       <workItem from="1631698061184" duration="1476000" />
-      <workItem from="1631701307127" duration="5616000" />
+      <workItem from="1631701307127" duration="6680000" />
     </task>
     <servers />
   </component>

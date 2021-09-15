@@ -1,5 +1,17 @@
 import React from "react";
 
-const QuestionCard = () => <div>QuestionCard</div>;
+type Props = {
+    question: string;
+    answer: string[];
+    callback: any;
+    userAnswer: string;
+    questionNum: number;
+    totalQuestions: number;
+}
+
+const QuestionCard = () => (
+    <div>
+        QuestionCard
+    </div>);
 
 export default QuestionCard;
