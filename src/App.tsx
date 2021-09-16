@@ -35,15 +35,15 @@ const App = () => {
             <button className="start" onClick={startQuiz}>Start Quiz</button>
             <p className="score">Score:</p>
             <p>Questions loading...</p>
-            <QuestionCard
-                // update props ~ function arguments with states
-                questionNum={number + 1}
-                totalQuestions={10}
-                question={questions[number].question}
-                answers={questions[number].answers}
-                playerAnswer={playerAnswers ? playerAnswers[number] : undefined}
-                callback={checkAnswer}
-            />
+            {/*<QuestionCard*/}
+            {/*    // update props ~ function arguments with states*/}
+            {/*    questionNum={number + 1}*/}
+            {/*    totalQuestions={10}*/}
+            {/*    question={questions[number].question}*/}
+            {/*    answers={questions[number].answers}*/}
+            {/*    playerAnswer={playerAnswers ? playerAnswers[number] : undefined}*/}
+            {/*    callback={checkAnswer}*/}
+            {/*/>*/}
             <button className="next" onClick={nextQuestion}>Next Question</button>
         </div>
     );
