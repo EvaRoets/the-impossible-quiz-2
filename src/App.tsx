@@ -1,7 +1,16 @@
 // import useState hook to keep local state in functional component
 import React, {useState} from 'react';
 import { fetchQuizQuestions } from "./API";
+
+//types
 import { QuestionState } from "./API";
+
+type AnswerObject = {
+    question: string;
+    answer: string;
+    correct: boolean;
+    correctAnswer: string;
+}
 
 //components
 import QuestionCard from "./components/QuestionCard";
@@ -13,7 +22,7 @@ const App = () => {
     // array of type questionstate
     const [questions, setQuestions] = useState<QuestionState[]>([]);
     const [number, setNumber] = useState(0);
-    const [playerAnswers, setPLayerAnswers] = useState([]);
+    const [playerAnswers, setPLayerAnswers] = useState<AnswerObject[]>([]);
     const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(true);
 
