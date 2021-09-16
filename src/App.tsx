@@ -57,8 +57,7 @@ const App = () => {
                 <button className="start" onClick={startQuiz}>
                     Start Quiz
                 </button>
-            ) : null
-            }
+            ): null}
 
             {!gameOver ? <p className="score">Score:</p> : null}
             {loading && <p>Questions loading...</p>}
@@ -77,7 +76,6 @@ const App = () => {
 
             {!gameOver && !loading && playerAnswers.length === number + 1 && number !== 9 ? (
                 <button className="next" onClick={nextQuestion}>Next Question</button>
-
             ): null}
 
         </div>
