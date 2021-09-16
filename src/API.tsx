@@ -7,7 +7,8 @@ export type Question = {
     type: string;
 }
 
-
+// ensure correct and incorrect answers appear in same array
+export type QuestionState = Question & { answers: string []};
 
 
 
