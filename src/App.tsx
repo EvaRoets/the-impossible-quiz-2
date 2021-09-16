@@ -54,29 +54,32 @@ const App = () => {
         <div className="App">
             <h1>The Impossible Quiz</h1>
             {gameOver || playerAnswers.length === 10 ? (
-                    <button className="start" onClick={startQuiz}>
-                        Start Quiz
-                    </button>
-                ) : null
+                <button className="start" onClick={startQuiz}>
+                    Start Quiz
+                </button>
+            ) : null
             }
 
-            {!gameOver ? <p className="score">Score:</p>: null}
-            {loading ? <p>Questions loading...</p>: null}
+            {!gameOver ? <p className="score">Score:</p> : null}
+            {loading && <p>Questions loading...</p>}
 
-            {!loading || !gameOver && (
+            {!loading && !gameOver && (
                 <QuestionCard
-                // update props ~ function arguments with states
-                questionNum={number + 1}
-                totalQuestions={10}
-                question={questions[number].question}
-                answers={questions[number].answers}
-                playerAnswer={playerAnswers ? playerAnswers[number] : undefined}
-                callback={checkAnswer}
-            />
+                    // update props ~ function arguments with states
+                    questionNum={number + 1}
+                    totalQuestions={10}
+                    question={questions[number].question}
+                    answers={questions[number].answers}
+                    playerAnswer={playerAnswers ? playerAnswers[number] : undefined}
+                    callback={checkAnswer}
+                />
             )}
 
+            {!gameOver && !loading && playerAnswers.length === number + 1 && number !== 9 ? (
+                <button className="next" onClick={nextQuestion}>Next Question</button>
 
-            <button className="next" onClick={nextQuestion}>Next Question</button>
+            ): null}
+
         </div>
     );
 }
