@@ -53,7 +53,6 @@ const App = () => {
     return (
         <div className="App">
             <h1>The Impossible Quiz</h1>
-            {/*ONLY DISPLAY BUTTON WHEN GAME IS OVER OR IF PLAYER ANSWERED THE LAST QUESTION*/}
             {gameOver || playerAnswers.length === 10 ? (
                     <button className="start" onClick={startQuiz}>
                         Start Quiz
@@ -61,8 +60,9 @@ const App = () => {
                 ) : null
             }
 
-            <p className="score">Score:</p>
-            <p>Questions loading...</p>
+            {!gameOver ? <p className="score">Score:</p>: null}
+            {loading ? <p>Questions loading...</p>: null}
+
             {/*<QuestionCard*/}
             {/*    // update props ~ function arguments with states*/}
             {/*    questionNum={number + 1}*/}
