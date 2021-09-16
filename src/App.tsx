@@ -26,9 +26,8 @@ const App = () => {
     const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(true);
 
-    console.log(fetchQuizQuestions(10))
+    console.log(questions)
 
-    //TODO set functions
     const startQuiz = async () => {
         // trigger api fetch with built-in function
         const newQuestions = await fetchQuizQuestions(10);
@@ -45,6 +44,8 @@ const App = () => {
     const checkAnswer = (event: React.MouseEvent<HTMLButtonElement>) => {
 
     };
+
+    //TODO set function
     const nextQuestion = () => {
 
     };
@@ -52,8 +53,14 @@ const App = () => {
     return (
         <div className="App">
             <h1>The Impossible Quiz</h1>
-            {/*when player clicks, startQuiz function is called*/}
-            <button className="start" onClick={startQuiz}>Start Quiz</button>
+            {/*ONLY DISPLAY BUTTON WHEN GAME IS OVER OR IF PLAYER ANSWERED THE LAST QUESTION*/}
+            {gameOver || playerAnswers.length === 10 ? (
+                    <button className="start" onClick={startQuiz}>
+                        Start Quiz
+                    </button>
+                ) : null
+            }
+
             <p className="score">Score:</p>
             <p>Questions loading...</p>
             {/*<QuestionCard*/}
