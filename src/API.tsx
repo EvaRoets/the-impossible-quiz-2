@@ -19,13 +19,20 @@ export type QuestionState = Question & { answers: string [] };
 export const fetchQuizQuestions = async (amount: number) => {
     const endPoint = `https://opentdb.com/api.php?amount=${amount}&category=17&difficulty=easy&type=multiple`;
     // await fetch, then await conversion to json
-    const data = await (await fetch(endPoint)).json();
-    return data.results.map((question: Question) => (
-        //return object
-        {
-            //grab all properties of the question with spread operator
-            ...question,
-            answers: shuffleArray([...question.incorrect_answers, question.correct_answer])
-        }
-    ))
+    try {
+        const data = await (await fetch(endPoint)).json();
+        return data.results.map((question: Question) => (
+            //return object
+            {
+                //grab all properties of the question with spread operator
+                ...question,
+                answers: shuffleArray([...question.incorrect_answers, question.correct_answer])
+            }
+        ))
+    }
+    catch(error){
+        alert( "Oh-oh, something went wrong" );
+    }
+
+
 }

@@ -36,7 +36,6 @@ const App = () => {
         setLoading(true);
             setGameOver(false);
             setQuestions(newQuestions);
-            //TODO add catch error handling
             setScore(0);
             setPlayerAnswers([]);
             setNumber(0);
