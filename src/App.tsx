@@ -19,10 +19,10 @@ const App = () => {
     // declare state variables with pair values, the second of which is a function
     // to store values between function calls/re-renders
     const [loading, setLoading] = useState(false);
-    // array of type questionstate
+    // array of type question state
     const [questions, setQuestions] = useState<QuestionState[]>([]);
     const [number, setNumber] = useState(0);
-    const [playerAnswers, setPLayerAnswers] = useState<AnswerObject[]>([]);
+    const [playerAnswers, setPlayerAnswers] = useState<AnswerObject[]>([]);
     const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(true);
 
@@ -30,8 +30,21 @@ const App = () => {
 
     //TODO set functions
     const startQuiz = async () => {
+        // trigger api fetch with built-in function
+        const newQuestions = await fetchQuizQuestions(10);
+
+        setLoading(true);
+            setGameOver(false);
+            setQuestions(newQuestions);
+            //TODO add catch error handling
+            setScore(0);
+            setPlayerAnswers([]);
+            setNumber(0);
+        setLoading(false);
+
 
     };
+
     const checkAnswer = (event: React.MouseEvent<HTMLButtonElement>) => {
 
     };
