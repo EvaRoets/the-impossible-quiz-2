@@ -1,6 +1,6 @@
 import React from "react";
 
-// Add props to be passed in functional component ~ function arguments
+
 type Props = {
     question: string;
     answers: string[];
@@ -10,28 +10,23 @@ type Props = {
     totalQuestions: number;
 }
 
-// Add functional component, using the above mentioned props
 const QuestionCard: React.FunctionComponent<Props> = ({
-          question,
-          answers,
-          callback,
-          playerAnswer,
-          questionNum,
-          totalQuestions
-      }) => (
+      question,
+      answers,
+      callback,
+      playerAnswer,
+      questionNum,
+      totalQuestions
+  }) => (
     <div>
-        {/*current question number*/}
-        <p className="number">Question {questionNum} / {totalQuestions}</p>
-
-        {/*current question*/}
+        <p className="number">
+            Question {questionNum} / {totalQuestions}
+        </p>
         <p dangerouslySetInnerHTML={{__html: question}}>
             <div>
-                {/* current answer possibilities */}
-                {answers.map(answer => (
+                {answers.map((answer) => (
                     <div key={answer}>
-                        {/*button is disabled depending on whether the player answers*/}
                         <button disabled={playerAnswer} onClick={callback}>
-                            {/*display the answer */}
                             <span dangerouslySetInnerHTML={{__html: answer}}/>
                         </button>
                     </div>
