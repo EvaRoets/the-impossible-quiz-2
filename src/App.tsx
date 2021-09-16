@@ -1,9 +1,12 @@
 // import useState hook to keep local state in functional component
 import React, {useState} from 'react';
-import { fetchQuizQuestions } from "./API";
+import {fetchQuizQuestions} from "./API";
+
+//components
+import QuestionCard from "./components/QuestionCard";
 
 //types
-import { QuestionState } from "./API";
+import {QuestionState} from "./API";
 
 type AnswerObject = {
     question: string;
@@ -11,9 +14,6 @@ type AnswerObject = {
     correct: boolean;
     correctAnswer: string;
 }
-
-//components
-import QuestionCard from "./components/QuestionCard";
 
 const App = () => {
     // declare state variables with pair values, the second of which is a function
@@ -34,14 +34,12 @@ const App = () => {
         const newQuestions = await fetchQuizQuestions(10);
 
         setLoading(true);
-            setGameOver(false);
-            setQuestions(newQuestions);
-            setScore(0);
-            setPlayerAnswers([]);
-            setNumber(0);
+        setGameOver(false);
+        setQuestions(newQuestions);
+        setScore(0);
+        setPlayerAnswers([]);
+        setNumber(0);
         setLoading(false);
-
-
     };
 
     const checkAnswer = (event: React.MouseEvent<HTMLButtonElement>) => {
