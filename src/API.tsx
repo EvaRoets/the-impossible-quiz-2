@@ -1,3 +1,6 @@
+// import shuffle function
+import {shuffleArray} from "./utils";
+
 // create own type
 export type Question = {
     category: string;
@@ -9,7 +12,7 @@ export type Question = {
 }
 
 // ensure correct and incorrect answers appear in same array
-export type QuestionState = Question & { answers: string []};
+export type QuestionState = Question & { answers: string [] };
 
 
 // Add async to return promises
@@ -23,7 +26,7 @@ export const fetchQuizQuestions = async (amount: number) => {
         {
             //grab all properties of the question with spread operator
             ...question,
-            answer: [...question.incorrect_answer, question.correct_answer]
+            answer: shuffleArray([...question.incorrect_answer, question.correct_answer])
         }
     ))
 }
