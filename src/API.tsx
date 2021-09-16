@@ -6,14 +6,13 @@ export type Question = {
     category: string;
     correct_answer: string;
     difficulty: string;
-    incorrect_answer: string[];
+    incorrect_answers: string[];
     question: string;
     type: string;
 }
 
 // ensure correct and incorrect answers appear in same array
 export type QuestionState = Question & { answers: string [] };
-
 
 // Add async to return promises
 // Add amount as parameter, but all the other options could be adjusted too
@@ -26,7 +25,7 @@ export const fetchQuizQuestions = async (amount: number) => {
         {
             //grab all properties of the question with spread operator
             ...question,
-            answer: shuffleArray([...question.incorrect_answer, question.correct_answer])
+            answers: shuffleArray([...question.incorrect_answers, question.correct_answer])
         }
     ))
 }

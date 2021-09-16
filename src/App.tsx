@@ -1,6 +1,7 @@
 // import useState hook to keep local state in functional component
 import React, {useState} from 'react';
-import {fetchQuizQuestions} from "./API";
+import { fetchQuizQuestions } from "./API";
+import { QuestionState } from "./API";
 
 //components
 import QuestionCard from "./components/QuestionCard";
@@ -9,7 +10,8 @@ const App = () => {
     // declare state variables with pair values, the second of which is a function
     // to store values between function calls/re-renders
     const [loading, setLoading] = useState(false);
-    const [questions, setQuestions] = useState([]);
+    // array of type questionstate
+    const [questions, setQuestions] = useState<QuestionState[]>([]);
     const [number, setNumber] = useState(0);
     const [playerAnswers, setPLayerAnswers] = useState([]);
     const [score, setScore] = useState(0);
