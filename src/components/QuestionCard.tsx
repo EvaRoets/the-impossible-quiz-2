@@ -27,7 +27,7 @@ const QuestionCard: React.FunctionComponent<Props> = ({
                 {/* current answer possibilities */}
                 {answers.map(answer => (
                     <div>
-                        <button disabled={userAnswer} onClick={callback}>
+                        <button disabled={playerAnswer} onClick={callback}>
                             <span dangerouslySetInnerHTML={{__html: answer}}/>
                         </button>
                     </div>

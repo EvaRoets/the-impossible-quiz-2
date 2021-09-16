@@ -30,7 +30,10 @@
       <change afterPath="$PROJECT_DIR$/../readable-code" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sql-advanced-queries/mysqlsampledatabase.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../the-dream" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/API.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/QuestionCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/QuestionCard.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +81,8 @@
       <option name="presentableId" value="Default" />
       <updated>1631698059046</updated>
       <workItem from="1631698061184" duration="1476000" />
-      <workItem from="1631701307127" duration="8592000" />
+      <workItem from="1631701307127" duration="9361000" />
+      <workItem from="1631776398026" duration="2297000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,13 @@
+// import useState hook to keep local state in functional component
 import React, {useState} from 'react';
+import { fetchQuizQuestions } from "./API";
 
 //components
 import QuestionCard from "./components/QuestionCard";
 
 const App = () => {
+    // declare state variables with pair values, the second of which is a function
+    // to store values between function calls/re-renders
     const [loading, setLoading] = useState(false);
     const [questions, setQuestions] = useState([]);
     const [number, setNumber] = useState(0);
@@ -11,14 +15,22 @@ const App = () => {
     const [score, setScore] = useState(0);
     const [gameOver, setGameOver] = useState(true);
 
+    console.log (fetchQuizQuestions(10))
+
+    //TODO set functions
+    const startQuiz = () => {};
+    const checkAnswer = () => {};
+    const nextQuestion = () => {};
 
   return (
     <div className="App">
       <h1>The Impossible Quiz</h1>
+        {/*when player clicks, startquiz function is called*/}
         <button className="start" onClick={startQuiz}>Start Quiz</button>
         <p className="score">Score:</p>
         <p>Questions loading...</p>
       <QuestionCard
+          // update states through props
           questionNum={number + 1}
           totalQuestions={10}
           question={questions[number].question}
