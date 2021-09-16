@@ -63,15 +63,19 @@ const App = () => {
             {!gameOver ? <p className="score">Score:</p>: null}
             {loading ? <p>Questions loading...</p>: null}
 
-            {/*<QuestionCard*/}
-            {/*    // update props ~ function arguments with states*/}
-            {/*    questionNum={number + 1}*/}
-            {/*    totalQuestions={10}*/}
-            {/*    question={questions[number].question}*/}
-            {/*    answers={questions[number].answers}*/}
-            {/*    playerAnswer={playerAnswers ? playerAnswers[number] : undefined}*/}
-            {/*    callback={checkAnswer}*/}
-            {/*/>*/}
+            {!loading || !gameOver && (
+                <QuestionCard
+                // update props ~ function arguments with states
+                questionNum={number + 1}
+                totalQuestions={10}
+                question={questions[number].question}
+                answers={questions[number].answers}
+                playerAnswer={playerAnswers ? playerAnswers[number] : undefined}
+                callback={checkAnswer}
+            />
+            )}
+
+
             <button className="next" onClick={nextQuestion}>Next Question</button>
         </div>
     );
