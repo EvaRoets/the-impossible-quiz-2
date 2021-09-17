@@ -51,7 +51,8 @@ const App: React.FunctionComponent = () => {
         const next = number + 1;
         if (next === 10) {
             setGameOver(true);
-        } else {
+        }
+        else {
             setNumber(next);
         }
     };
