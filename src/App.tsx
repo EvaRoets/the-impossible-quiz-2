@@ -29,7 +29,17 @@ const App: React.FunctionComponent = () => {
         setLoading(false);
     };
 
+
     const checkAnswer = (event: React.MouseEvent<HTMLButtonElement>) => {
+    if (!gameOver){
+        // get player answer
+        const playerAnswer = event.currentTarget.value;
+
+        // compare player answer to correct answer
+        const correctAnswer = questions[number].correct_answer === answer;
+
+    }
+
     };
 
     const nextQuestion = () => {
