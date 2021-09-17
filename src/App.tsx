@@ -36,7 +36,9 @@ const App: React.FunctionComponent = () => {
         const playerAnswer = event.currentTarget.value;
 
         // compare player answer to correct answer
-        const correctAnswer = questions[number].correct_answer === answer;
+        const correctAnswer = questions[number].correct_answer === playerAnswer;
+
+        if (correctAnswer) setScore(prevState => prevState + 1);
 
     }
 
