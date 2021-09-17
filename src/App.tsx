@@ -3,7 +3,7 @@ import {fetchQuizQuestions} from "./API";
 import QuestionCard from "./components/QuestionCard";
 import {QuestionState} from "./API";
 
-type AnswerObject = {
+export type AnswerObject = {
     question: string;
     answer: string;
     correct: boolean;
@@ -49,10 +49,10 @@ const App: React.FunctionComponent = () => {
 
     const nextQuestion = () => {
         const next = number + 1;
+
         if (next === 10) {
             setGameOver(true);
-        }
-        else {
+        } else {
             setNumber(next);
         }
     };
@@ -66,9 +66,8 @@ const App: React.FunctionComponent = () => {
                 </button>
             ) : null}
 
-            {!gameOver ? <p className="score">Score:</p> : null}
-            {loading && <p>Questions loading...</p>}
-
+            {!gameOver ? <p className="score">Score: {score}</p> : null}
+            {loading ? <p>Questions loading...</p>: null}
             {!loading && !gameOver && (
                 <QuestionCard
                     questionNum={number + 1}
@@ -85,7 +84,6 @@ const App: React.FunctionComponent = () => {
                     Next Question
                 </button>
             ) : null}
-
         </div>
     );
 }

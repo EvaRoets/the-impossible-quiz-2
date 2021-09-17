@@ -1,32 +1,31 @@
 import React from "react";
+import {AnswerObject} from '../App';
 
 
 type Props = {
     question: string;
     answers: string[];
-    callback: any;
-    playerAnswer: any;
+    callback: (event: React.MouseEvent<HTMLButtonElement>) => void;
+    playerAnswer: AnswerObject | undefined;
     questionNum: number;
     totalQuestions: number;
 }
 
-const QuestionCard: React.FunctionComponent<Props> = ({
-      question,
-      answers,
-      callback,
-      playerAnswer,
-      questionNum,
-      totalQuestions
-  }) => (
+const QuestionCard: React.FC<Props> = ({
+  question,
+  answers,
+  callback,
+  playerAnswer,
+  questionNum,
+  totalQuestions
+}) => (
     <div>
-        <p className="number">
-            Question {questionNum} / {totalQuestions}
-        </p>
+        <p className="number">Question {questionNum} / {totalQuestions}</p>
         <p dangerouslySetInnerHTML={{__html: question}}>
             <div>
                 {answers.map((answer) => (
                     <div key={answer}>
-                        <button disabled={playerAnswer} onClick={callback} value={playerAnswer}>
+                        <button disabled={playerAnswer} onClick={callback} value={answer}>
                             <span dangerouslySetInnerHTML={{__html: answer}}/>
                         </button>
                     </div>
