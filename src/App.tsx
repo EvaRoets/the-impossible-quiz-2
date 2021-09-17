@@ -31,29 +31,29 @@ const App: React.FunctionComponent = () => {
 
     const checkAnswer = (event: React.MouseEvent<HTMLButtonElement>) => {
         if (!gameOver) {
-            // get player answer
             const answer = event.currentTarget.value;
-
-            // compare player answer to correct answer
             const correct = questions[number].correct_answer === answer;
 
-            // Add to score
             if (correct) setScore(prevState => prevState + 1);
 
-            // Save answer
             const answerObject = {
                 question: questions[number].question,
                 answer: answer,
                 correct: correct,
                 correctAnswer: questions[number].correct_answer
             };
+
             setPlayerAnswers(prevState => [...prevState, answerObject]);
-
         }
-
     };
 
     const nextQuestion = () => {
+        const next = number + 1;
+        if (next === 10) {
+            setGameOver(true);
+        } else {
+            setNumber(next);
+        }
     };
 
     return (
