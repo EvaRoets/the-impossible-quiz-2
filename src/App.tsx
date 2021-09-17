@@ -10,7 +10,7 @@ export type AnswerObject = {
     correctAnswer: string;
 }
 
-const App: React.FunctionComponent = () => {
+const App: React.FC = () => {
     const [loading, setLoading] = useState(false);
     const [questions, setQuestions] = useState<QuestionState[]>([]);
     const [number, setNumber] = useState(0);
@@ -67,7 +67,7 @@ const App: React.FunctionComponent = () => {
             ) : null}
 
             {!gameOver ? <p className="score">Score: {score}</p> : null}
-            {loading ? <p>Questions loading...</p>: null}
+            {loading ? <p>Questions loading...</p> : null}
             {!loading && !gameOver && (
                 <QuestionCard
                     questionNum={number + 1}

@@ -1,7 +1,6 @@
 import React from "react";
 import {AnswerObject} from '../App';
 
-
 type Props = {
     question: string;
     answers: string[];
@@ -12,22 +11,27 @@ type Props = {
 }
 
 const QuestionCard: React.FC<Props> = ({
-  question,
-  answers,
-  callback,
-  playerAnswer,
-  questionNum,
-  totalQuestions
-}) => (
+                                           question,
+                                           answers,
+                                           callback,
+                                           playerAnswer,
+                                           questionNum,
+                                           totalQuestions
+                                       }) => (
     <div>
         <p className="number">Question {questionNum} / {totalQuestions}</p>
         <p dangerouslySetInnerHTML={{__html: question}}>
             <div>
                 {answers.map((answer) => (
-                    <div key={answer}>
-                        <button disabled={!!playerAnswer} value={answer} onClick={callback}>
-                            <span dangerouslySetInnerHTML={{__html: answer}}/>
-                        </button>
+                    <div
+                        key={answer}
+                        correct={playerAnswer?.correctAnswer === answer}
+                        userClicked={playerAnswer?.answer === answer}>
+                            <button disabled={!!playerAnswer}
+                                    value={answer}
+                                    onClick={callback}>
+                                <span dangerouslySetInnerHTML={{__html: answer}}/>
+                            </button>
                     </div>
                 ))}
             </div>
