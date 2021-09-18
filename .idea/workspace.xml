@@ -30,7 +30,8 @@
       <change afterPath="$PROJECT_DIR$/../readable-code" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../sql-advanced-queries/mysqlsampledatabase.sql" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../the-dream" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/App.styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/quiz-background.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/quiz-background.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +80,7 @@
       <workItem from="1631776398026" duration="10550000" />
       <workItem from="1631862779034" duration="2441000" />
       <workItem from="1631889115090" duration="3840000" />
-      <workItem from="1631956991554" duration="298000" />
+      <workItem from="1631956991554" duration="1470000" />
     </task>
     <task id="LOCAL-00001" summary="Test fetch Questions">
       <created>1631784891765</created>
